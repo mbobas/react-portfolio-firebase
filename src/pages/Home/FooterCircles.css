@@ -1,0 +1,18 @@
+.svg-icon path {
+    transition: 1000ms;
+    -webkit-transition: 1000ms;
+    -moz-transition: 1000ms;
+    -ms-transition: 1000ms;
+    -o-transition: 1000ms;
+}
+  
+  .svg-icon:hover path {
+    fill: #292;
+    
+  }
+  
+  .svg-icon.github:hover path {
+    fill: #7510F7;
+    
+  }
+  
