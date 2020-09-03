@@ -1,6 +1,6 @@
 {
-  "name": "mbobas.github.io",
-  "homepage": "https://mbobas.github.com/react-portfolio",
+  "name": "react-portfolio-firebase.com",
+  "homepage": "https://react-portfolio-firebase.firebaseapp.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
