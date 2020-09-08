@@ -11,3 +11,7 @@ export enum EnumText {
      mystartuptext =  'Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum',
      iamproudheader =  ' I am proud to I can colaborated with some awesome companies =  \n Devleaders.pl',
 };
+
+export const skillsLeft = [1,2,3,4,5,6];
+export const skillsCenter = [1,2,3,4,5,6];
+export const skillsRight = [1,2,3,4,5,6];

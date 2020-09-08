@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import {EnumText} from './EnumText';
 import ProjectBox2 from './ProjectBox2';
 import autor from '../../assets/autor.png';
 import singlescreen from '../../assets/singlescreen.png';
@@ -9,7 +10,8 @@ import Background from '../../assets/background.png';
 import ProjectButton from './ProjectButton';
 import MyStartupButton from './MyStartupButton';
 import FooterCircles from './FooterCircles';
-import {EnumText} from './EnumText';
+import KnowlageItemLeft from './KnowlageWrapper/KnowlageItemLeft';
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -160,21 +162,7 @@ const KnowlageWrapper = styled.div`
   }
 `;
 
-const KnowlageItemLeft = styled.div`
-  height: 100%;
-  flex: 1;
-  border-right: 1px solid #E6ECF8;
-  background-color: #FFF;
-  border-radius: 10px 0px 0px 10px;
-  @media only screen and (max-width: 700px) {
-    height: 31%;
-    flex: 1;
-    min-width: 90%;
-    border: 1px solid #E6ECF8;
-    background-color: #FFF;
-    border-radius: 10px 10px 10px 10px;
-  }
-`;
+
 
 const KnowlageItemCenter = styled.div`
   height: 100%;
@@ -352,7 +340,7 @@ const SeparatorLine2 = styled.div`
   border: 1px solid #00000021;
 `;
 
-let skills1 = [1, 2, 3, 4];
+let skills1 = [1,2,3,4];
 let skills2 = [3,4,5,6,];
 let skills3 = [7,8,9,10];
 
@@ -380,7 +368,7 @@ class Home extends Component {
           </WhoIWrapper>
 
           <KnowlageWrapper>
-              <KnowlageItemLeft>{listItems(skills1)}</KnowlageItemLeft>
+              <KnowlageItemLeft/>
               <KnowlageItemCenter>{listItems(skills2)}</KnowlageItemCenter>
               <KnowlageItemRight>{listItems(skills3)}</KnowlageItemRight>
           </KnowlageWrapper>
