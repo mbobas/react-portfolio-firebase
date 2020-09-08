@@ -31,16 +31,12 @@ const CircleButton = styled.div`
   }
 `;
 
-
 class Footer extends React.Component {
-
-
-
   render() {
     return (
           <Wrapper>
             <CircleButton> 
-              <Link to="/github">
+              <Link to="/github" target="_blank">
                 <div style={styles}>
                   <GithubIcon
                     fill="#fff"
@@ -53,7 +49,7 @@ class Footer extends React.Component {
             </CircleButton>
 
             <CircleButton> 
-                <Link to="/github" target="_blank">
+                <Link to="/linkedin" target="_blank">
                   <div style={styles}>
                     <LinkedInIcon
                       fill="#fff"
@@ -66,9 +62,22 @@ class Footer extends React.Component {
             </CircleButton>
             
             <CircleButton> 
-              <Link to="/github">
+              <Link to="/contact">
                 <div style={styles}>
                   <EmailIcon
+                    fill="#fff"
+                    width={"40px"}
+                    className="github"
+                    style={{  padding: "10px" }}
+                  />
+                </div>
+              </Link>
+            </CircleButton>
+
+            <CircleButton> 
+              <Link to="/contact">
+                <div style={styles}>
+                  <CVIcon
                     fill="#fff"
                     width={"40px"}
                     className="github"

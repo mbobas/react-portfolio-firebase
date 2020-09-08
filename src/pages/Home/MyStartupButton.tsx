@@ -86,10 +86,7 @@ interface MyStartupButtonProps {
 }
 
 class MyStartupButton extends React.Component<MyStartupButtonProps> {
-  shoot() {
-    alert("Great Shot!!");
-  }
-
+  
   render() {
     return (
           <Wrapper>

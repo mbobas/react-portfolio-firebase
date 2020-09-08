@@ -9,6 +9,7 @@ import Background from '../../assets/background.png';
 import ProjectButton from './ProjectButton';
 import MyStartupButton from './MyStartupButton';
 import FooterCircles from './FooterCircles';
+import {EnumText} from './EnumText';
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,8 +25,6 @@ const Header = styled.div`
   min-height: 100vh;
   background-color: #FFF;
 `;
-//background-image: url(${Background});
-  ///background-color: #333;
 const HeaderText = styled.div`
   margin-top: 15vh;
   width: 99%;
@@ -62,8 +61,6 @@ const SubHeaderText = styled.div`
   }
 `;
 
-
-// /text-align: center;
 const HeaderImage = styled.img`
   margin-top: 15vh;
   border-radius: 50%;
@@ -89,7 +86,7 @@ const HeaderImage = styled.img`
 const WhoIWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 110vh;
+  min-height: 80vh;
   background-color: #7510F7;
   font-color: #FFF;
   align-items: center;
@@ -142,7 +139,7 @@ const WhoISubText = styled.p`
 
 const KnowlageWrapper = styled.div`
   display: flex;
-  min-height: 100vh;
+  min-height: 50vh;
   margin-left: 15vw;
   margin-right: 15vw;
   border: 1px solid #E6ECF8;
@@ -172,7 +169,7 @@ const KnowlageItemLeft = styled.div`
   @media only screen and (max-width: 700px) {
     height: 31%;
     flex: 1;
-    min-width: 100%;
+    min-width: 90%;
     border: 1px solid #E6ECF8;
     background-color: #FFF;
     border-radius: 10px 10px 10px 10px;
@@ -187,11 +184,10 @@ const KnowlageItemCenter = styled.div`
     margin-top: 10px;
     height: 31%;
     flex: 1;
-    min-width: 100%;
+    min-width: 90%;
     border: 1px solid #E6ECF8;
     background-color: #FFF;
     border-radius: 10px 10px 10px 10px;
-
   }
 `;
 const KnowlageItemRight = styled.div`
@@ -202,13 +198,12 @@ const KnowlageItemRight = styled.div`
   border-radius: 0px 10px 10px 0px;
   @media only screen and (max-width: 700px) {
     height: 31%;
-    min-width: 300px;
+    min-width: 90px;
     border: 1px solid #E6ECF8;
     background-color: #FFF;
     border-radius: 10px 10px 10px 10px;
   }
 `;
-
 
 const ProjectHeaderText = styled.p`
   align-self: center;
@@ -351,42 +346,47 @@ const SeparatorLine = styled.div`
   border: 1px solid #00000021;
 `;
 
+const SeparatorLine2 = styled.div`
+  margin-top: 10px; 
+  width: 99vw;
+  border: 1px solid #00000021;
+`;
 
+let skills1 = [1, 2, 3, 4];
+let skills2 = [3,4,5,6,];
+let skills3 = [7,8,9,10];
 
-const name = '<CV> Michal Gulczynski </CV>';
-const title = 'React Native and React, Mobile & Front-end Developer ';
-const subtitle = 'I like creates dreams true, and I love this work.'
-const whoititle ='Hi, I’m Michal. Nice to meet you.';
-const whoisubtitle ='Since beginning my journey as a freelance designer nearly 8 years ago, I have done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I am quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.';
-const projectHeader ='My Recent Work';
-const projectSubHeader ='Here are a few design projects Ive worked on recently. Want to see more? Email me.';
-const mystartup = 'My Startup Projects';
-const mystartuptext = 'Lorem ipsum lorem ipsumLorem ipsum lorem ipsumLorem ipsum lorem ipsum';
-const iamproudheader =' I am proud to I can colaborated with some awesome companies: \n Devleaders.pl';
+const listItems = (skills:any) => skills.map((val:any) => {
+  return (
+    <ul>
+      <li>{val}</li>
+    </ul>
+  );
+});
 
 class Home extends Component {
   render() {
     return (
         <Wrapper>
           <Header>
-            <HeaderText> {title} </HeaderText>
-            <SubHeaderText> {subtitle} </SubHeaderText>
+            <HeaderText> {EnumText.title} </HeaderText>
+            <SubHeaderText> {EnumText.subtitle} </SubHeaderText>
             <HeaderImage></HeaderImage>
           </Header>
           <WhoIWrapper>
-            <WhoIHeaderText>{whoititle}</WhoIHeaderText>
-            <WhoISubText>{whoisubtitle}</WhoISubText>
+            <WhoIHeaderText>{EnumText.whoititle}</WhoIHeaderText>
+            <WhoISubText>{EnumText.whoisubtitle}</WhoISubText>
             <FooterCircles></FooterCircles>
           </WhoIWrapper>
-          <KnowlageWrapper>
-              <KnowlageItemLeft>{whoisubtitle}{whoisubtitle}</KnowlageItemLeft>
-              <KnowlageItemCenter>{whoisubtitle}{whoisubtitle}</KnowlageItemCenter>
-              <KnowlageItemRight>{whoisubtitle}{whoisubtitle}</KnowlageItemRight>
 
+          <KnowlageWrapper>
+              <KnowlageItemLeft>{listItems(skills1)}</KnowlageItemLeft>
+              <KnowlageItemCenter>{listItems(skills2)}</KnowlageItemCenter>
+              <KnowlageItemRight>{listItems(skills3)}</KnowlageItemRight>
           </KnowlageWrapper>
 
-          <ProjectHeaderText>{projectHeader}</ProjectHeaderText>
-          <ProjectSubHeaderText>{projectSubHeader}</ProjectSubHeaderText>
+          <ProjectHeaderText>{EnumText.projectHeader}</ProjectHeaderText>
+          <ProjectSubHeaderText>{EnumText.projectSubHeader}</ProjectSubHeaderText>
 
           <ProjectWrapperColumn>
             <ProjectButton
@@ -412,8 +412,8 @@ class Home extends Component {
           </ProjectWrapperColumn>
           
           <MyStartupWrapper>
-            <MyStartupHeaderText>{mystartup}</MyStartupHeaderText>
-            <MyStartSubText>{mystartuptext}</MyStartSubText>
+            <MyStartupHeaderText>{EnumText.mystartup}</MyStartupHeaderText>
+            <MyStartSubText>{EnumText.mystartuptext}</MyStartSubText>
           </MyStartupWrapper>
           
         <MyStartupWrapperColumn>
@@ -438,7 +438,7 @@ class Home extends Component {
         </MyStartupWrapperColumn>
         <SeparatorLine />
         
-        <IamProudHeaderText>{iamproudheader}</IamProudHeaderText>
+        <IamProudHeaderText>{EnumText.iamproudheader}</IamProudHeaderText>
 
         </Wrapper>
     );

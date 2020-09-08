@@ -58,7 +58,7 @@ class App extends Component {
   <Wrapper>
     <Router>
         <MenuWrapper>
-        <Link to={'/contact'} ><SayButton>Say Hello5</SayButton></Link>
+        <Link to={'/contact'} ><SayButton>Say Hello</SayButton></Link>
         <Link to={'/projects'} ><MenuLink>Projects</MenuLink></Link>
         <Link to={'/'} > <MenuLink>Home</MenuLink> </Link>
         </MenuWrapper>
@@ -69,6 +69,10 @@ class App extends Component {
               <Route path='/contact' component={Contact} />
               <Route path='/github' component={() => { 
                   window.location.href = 'https://github.com/mbobas'; 
+                  return null;
+              }}/>
+              <Route path='/linkedin' component={() => { 
+                  window.location.href = 'https://www.linkedin.com/in/micha%C5%82-gulczy%C5%84ski-b1a4ba163/'; 
                   return null;
               }}/>
           </Switch>
