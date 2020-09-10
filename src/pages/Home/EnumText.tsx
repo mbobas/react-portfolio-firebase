@@ -1,4 +1,6 @@
 
+// import reactlogo64 from './../../assets/skills/reactlogo54.png';
+
 export enum EnumText {
      NAME =  '<CV> Michal Gulczynski </CV>',
      title =  'React Native and React, Mobile & Front-end Developer ',
@@ -15,3 +17,9 @@ export enum EnumText {
 export const skillsLeft = [1,2,3,4,5,6];
 export const skillsCenter = [1,2,3,4,5,6];
 export const skillsRight = [1,2,3,4,5,6];
+
+// export const skillArray = [
+//      { src: reactlogo64, key: 1},
+//      { src: reactlogo64, key: 2},
+//      { src: reactlogo64, key: 3}
+//    ];
