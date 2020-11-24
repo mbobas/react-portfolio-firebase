@@ -9,6 +9,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   margin-top: 20px;
+  
 `;
 
 const MenuWrapper = styled.div`
