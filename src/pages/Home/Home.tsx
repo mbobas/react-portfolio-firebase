@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import {EnumText} from './EnumText';
 import ProjectBox2 from './ProjectBox2';
-import autor from '../../assets/autor.png';
+import autor_short from '../../assets/autor_short.png';
 import singlescreen from '../../assets/singlescreen.png';
 import myAvatarPNGSMALL from '../../assets/myAvatarPNGSMALL.png';
 import myAvatarPNG300 from '../../assets/myAvatarPNG300.png';
@@ -84,6 +84,13 @@ const HeaderImage = styled.img`
     width: 200px;
     background-image: url(${myAvatarPNGSMALL});
   }
+  &:hover {
+    // display: none;
+    height: 280px;
+    width: 280px;
+    background-image: url(${autor_short});
+  }
+
 `;
 const WhoIWrapper = styled.div`
   display: flex;
